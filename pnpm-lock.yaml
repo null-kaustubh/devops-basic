@@ -103,6 +103,9 @@ importers:
       bufferutil:
         specifier: ^4.0.1
         version: 4.0.9
+      typescript:
+        specifier: ^5.8.3
+        version: 5.8.3
       utf-8-validate:
         specifier: ^5.0.2
         version: 5.0.10
@@ -121,10 +124,13 @@ importers:
     dependencies:
       '@prisma/client':
         specifier: ^6.12.0
-        version: 6.12.0(prisma@6.12.0)
+        version: 6.12.0(prisma@6.12.0)(typescript@5.8.3)
       prisma:
         specifier: ^6.12.0
-        version: 6.12.0
+        version: 6.12.0(typescript@5.8.3)
+      typescript:
+        specifier: ^5.8.3
+        version: 5.8.3
     devDependencies:
       '@repo/typescript-config':
         specifier: workspace:*
@@ -777,7 +783,7 @@ packages:
       '@parcel/watcher-win32-x64': 2.5.1
     dev: true
 
-  /@prisma/client@6.12.0(prisma@6.12.0):
+  /@prisma/client@6.12.0(prisma@6.12.0)(typescript@5.8.3):
     resolution: {integrity: sha512-wn98bJ3Cj6edlF4jjpgXwbnQIo/fQLqqQHPk2POrZPxTlhY3+n90SSIF3LMRVa8VzRFC/Gec3YKJRxRu+AIGVA==}
     engines: {node: '>=18.18'}
     requiresBuild: true
@@ -790,7 +796,8 @@ packages:
       typescript:
         optional: true
     dependencies:
-      prisma: 6.12.0
+      prisma: 6.12.0(typescript@5.8.3)
+      typescript: 5.8.3
     dev: false
 
   /@prisma/config@6.12.0:
@@ -3090,7 +3097,7 @@ packages:
     engines: {node: '>=14'}
     dev: true
 
-  /prisma@6.12.0:
+  /prisma@6.12.0(typescript@5.8.3):
     resolution: {integrity: sha512-pmV7NEqQej9WjizN6RSNIwf7Y+jeh9mY1JEX2WjGxJi4YZWexClhde1yz/FuvAM+cTwzchcMytu2m4I6wPkIzg==}
     engines: {node: '>=18.18'}
     hasBin: true
@@ -3103,6 +3110,7 @@ packages:
     dependencies:
       '@prisma/config': 6.12.0
       '@prisma/engines': 6.12.0
+      typescript: 5.8.3
     dev: false
 
   /prop-types@15.8.1:
